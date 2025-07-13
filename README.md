@@ -6,6 +6,7 @@ A portable, standalone editor for Star Wars: Battlefront II profile data.
 → [Click here](https://) to download the latest version 
 
 ## Features
+- Automatic updates
 - Automatic profile-platform detection
 - Drag/drop + file browsing support
 - Automatic backup creation, backup before editing your profile
