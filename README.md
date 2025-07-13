@@ -14,5 +14,3 @@ May expand to include other versions of the game in the future:
       - Nintendo Switch
       - Xbox One / Series S / Series X
       - PS5
-
-![](https://i.ibb.co/Jwby7Lfh/Screenshot.png)
