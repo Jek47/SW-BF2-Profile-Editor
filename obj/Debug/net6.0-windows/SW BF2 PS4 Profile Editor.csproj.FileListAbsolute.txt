@@ -1,0 +1,41 @@
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.exe
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.deps.json
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.runtimeconfig.json
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.pdb
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.Properties.Resources.resources
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.csproj.GenerateResource.cache
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.AssemblyInfoInputs.cache
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.AssemblyInfo.cs
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.csproj.CoreCompileInputs.cache
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\refint\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.pdb
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.genruntimeconfig.cache
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\ref\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.Form1.resources
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.PlatformSelection.resources
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.dll.config
+C:\Users\Jake\Desktop\SW BF2 PS4 Profile Editor\SW BF2 PS4 Profile Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.About.resources
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.exe
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.dll.config
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.deps.json
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.runtimeconfig.json
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.pdb
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.About.resources
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.Form1.resources
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.PlatformSelection.resources
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.Properties.Resources.resources
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.csproj.GenerateResource.cache
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.AssemblyInfoInputs.cache
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.AssemblyInfo.cs
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.csproj.CoreCompileInputs.cache
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.sourcelink.json
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\refint\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.pdb
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.genruntimeconfig.cache
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\ref\SW BF2 PS4 Profile Editor.dll
