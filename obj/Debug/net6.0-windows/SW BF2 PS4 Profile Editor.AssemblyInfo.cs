@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SW BF2 PS4 Profile Editor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bd0495ddda500176f972b92918fae88064daae2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c17159985c3e27945e8d23f0dd2d58ea644b0a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("SW BF2 PS4 Profile Editor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SW BF2 PS4 Profile Editor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
