@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Antoine if you read this... stop judging me
+// I'm not a coder 😂
+// Also, fuck you Yousef
+using System;
 using System.Diagnostics;
 using System.Drawing.Text;
 using System.IO;
@@ -94,7 +97,7 @@ namespace SW_BF2_PS4_Profile_Editor
         private void btnLoad_Click(object sender, EventArgs e)
         {
             if (!string.Equals(toolStripStatusLabelStatus.Text, "Idle", StringComparison.OrdinalIgnoreCase))
-            {
+             {
                 DialogResult response = PromptToSaveBeforeOpening();
                 switch (response)
                 {
@@ -252,6 +255,7 @@ namespace SW_BF2_PS4_Profile_Editor
             return platformBySize;
 
             // if file length isn't enough to accurately detect the platform, look for headers //
+            // needs more testing really, but file length has been consistent in all cases i've seen so far //
 
             /*
             uint header;
@@ -393,13 +397,18 @@ namespace SW_BF2_PS4_Profile_Editor
                         break;
                 }
             }
-            ApplyOffsets(FilePath);
+            if (!ApplyOffsets(FilePath))
+            {
+                MessageBox.Show("Unable to determine the profile's platform. The profile will not be opened.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             ReadStatsFromFile(FilePath);
             StartFileMonitor();
             TextboxStatus(true);
             btnSave.Enabled = true;
-            toolStripStatusLabelFile.Text = $"{(FilePath)}";
+            toolStripStatusLabelFile.Text = $" │   {(FilePath)}   │ ";
             toolStripStatusLabelStatus.Text = "Editing";
+            txtProfileName.Text = Path.GetFileNameWithoutExtension(FilePath);
         }
         private void OnlyAllowDigits_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -502,13 +511,13 @@ namespace SW_BF2_PS4_Profile_Editor
         }
         private void TextboxStatus(bool enabled)
         {
-            txtProfileName.Enabled = enabled;
+            txtProfileName.Enabled = false;
             txtPlayerPoints.Enabled = enabled;
             txtKills.Enabled = enabled;
             txtDeaths.Enabled = enabled;
-            txtRank.Enabled = false;
-            txtKillDeathRatio.Enabled = false;
-            txtPointsPerLife.Enabled = false;
+            txtRank.Enabled = enabled;
+            txtKillDeathRatio.Enabled = enabled;
+            txtPointsPerLife.Enabled = enabled;
             txtGunslinger.Enabled = enabled;
             txtFrenzy.Enabled = enabled;
             txtDemolition.Enabled = enabled;

@@ -485,8 +485,10 @@
             // 
             txtProfileName.Location = new Point(218, 43);
             txtProfileName.Name = "txtProfileName";
+            txtProfileName.ReadOnly = true;
             txtProfileName.Size = new Size(111, 23);
             txtProfileName.TabIndex = 2;
+            toolTip1.SetToolTip(txtProfileName, "Profile name");
             // 
             // lblStats
             // 
@@ -498,7 +500,7 @@
             lblStats.Name = "lblStats";
             lblStats.Size = new Size(431, 32);
             lblStats.TabIndex = 42;
-            lblStats.Text = "───  S t a t i s t i c s ───────────────";
+            lblStats.Text = "───  S t a t i s t i c S ───────────────";
             // 
             // lblMedals
             // 
@@ -510,7 +512,7 @@
             lblMedals.Name = "lblMedals";
             lblMedals.Size = new Size(434, 32);
             lblMedals.TabIndex = 41;
-            lblMedals.Text = "───  M e d a l s ─────────────────────";
+            lblMedals.Text = "───  M e d a l S ─────────────────────";
             // 
             // btnHelp
             // 
@@ -526,7 +528,7 @@
             btnHelp.Location = new Point(864, 38);
             btnHelp.Name = "btnHelp";
             btnHelp.Size = new Size(25, 25);
-            btnHelp.TabIndex = 37;
+            btnHelp.TabIndex = 38;
             toolTip1.SetToolTip(btnHelp, "Help");
             btnHelp.UseVisualStyleBackColor = false;
             btnHelp.Click += btnHelp_Click;
@@ -545,7 +547,7 @@
             btnAbout.Location = new Point(864, 5);
             btnAbout.Name = "btnAbout";
             btnAbout.Size = new Size(25, 25);
-            btnAbout.TabIndex = 38;
+            btnAbout.TabIndex = 37;
             toolTip1.SetToolTip(btnAbout, "About");
             btnAbout.UseVisualStyleBackColor = false;
             btnAbout.Click += btnAbout_Click;
@@ -564,7 +566,7 @@
             btnMute.Location = new Point(864, 462);
             btnMute.Name = "btnMute";
             btnMute.Size = new Size(25, 25);
-            btnMute.TabIndex = 40;
+            btnMute.TabIndex = 39;
             toolTip1.SetToolTip(btnMute, "Mute");
             btnMute.UseVisualStyleBackColor = false;
             btnMute.Click += btnMute_Click;

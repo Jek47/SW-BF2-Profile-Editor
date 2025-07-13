@@ -34,5 +34,17 @@ namespace SW_BF2_PS4_Profile_Editor.Properties {
                 this["MusicMuted"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SkipUpdatePrompts {
+            get {
+                return ((bool)(this["SkipUpdatePrompts"]));
+            }
+            set {
+                this["SkipUpdatePrompts"] = value;
+            }
+        }
     }
 }
