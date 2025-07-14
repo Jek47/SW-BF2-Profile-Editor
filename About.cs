@@ -41,7 +41,7 @@ namespace SW_BF2_PS4_Profile_Editor
             lblWebsite.UseCompatibleTextRendering = true;
             lblDesc.UseCompatibleTextRendering = true;
             Version? verNo = Assembly.GetExecutingAssembly().GetName().Version;
-            lblVerNo.Text = verNo != null ? $"v{verNo.Major}.{verNo.Minor}" : "Error";
+            lblVerNo.Text = verNo != null ? $"v{verNo}" : "Error";
         }
         private void lnklblGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -59,6 +59,7 @@ namespace SW_BF2_PS4_Profile_Editor
         {
             CFUfromMain = false;
             string currentVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "0.0";
+            MessageBox.Show("Current version: " + currentVersion);
             string latestVersion = "";
             using (HttpClient client = new HttpClient())
             {
@@ -74,7 +75,7 @@ namespace SW_BF2_PS4_Profile_Editor
                             string updateUrl = await client.GetStringAsync("https://github.com/Jek47/SW-BF2-Profile-Editor/blob/main/Properties/rel");
                             updateUrl = updateUrl.Trim();
                             string downloadsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-                            string downloadPath = Path.Combine(downloadsFolder, "SWBF2Editor_New.exe");
+                            string downloadPath = Path.Combine(downloadsFolder, "SWBF2Editor_v", latestVersion, ".exe");
                             {
                                 try
                                 {

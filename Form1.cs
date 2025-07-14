@@ -92,7 +92,7 @@ namespace SW_BF2_PS4_Profile_Editor
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
-                FileName = "https://github.com/Jek47",
+                FileName = "https://github.com/Jek47/SW-BF2-Profile-Editor/tree/main/Docs/HELP.md",
                 UseShellExecute = true
             });
         }
@@ -396,7 +396,7 @@ namespace SW_BF2_PS4_Profile_Editor
             this.FormClosing += Form1_FormClosing;
             Version? appVersion = Assembly.GetExecutingAssembly().GetName().Version;
             toolStripStatusLabelAppVer.Text = (appVersion != null)
-                ? $"v{appVersion.Major}.{appVersion.Minor}"
+                ? $"v{appVersion}"
                 : "";
             lblProfileName.Font = FontManager.StarWarsMainFont;
             lblStats.Font = FontManager.StarWarsMainFont;

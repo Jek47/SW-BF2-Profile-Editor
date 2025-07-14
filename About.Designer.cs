@@ -59,7 +59,7 @@
             lblVerNo.AutoSize = true;
             lblVerNo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblVerNo.ForeColor = Color.White;
-            lblVerNo.Location = new Point(248, 40);
+            lblVerNo.Location = new Point(227, 40);
             lblVerNo.Name = "lblVerNo";
             lblVerNo.Size = new Size(27, 17);
             lblVerNo.TabIndex = 2;
