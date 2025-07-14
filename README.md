@@ -1,9 +1,9 @@
-![](https://i.imgur.com/WAZwgK8.png)
+![](https://i.ibb.co/XrYpgddX/Screen.png)
 
 # SW BF2 Profile Editor
-A portable, standalone editor for Star Wars: Battlefront II profile data.
+A portable, standalone editor for Star Wars: Battlefront 2 profile data.
 
-→ [Click here](https://) to download the latest version 
+→ [Click here]([https://](https://raw.githubusercontent.com/Jek47/SW-BF2-Profile-Editor/main/bin/Release/net6.0-windows/publish/win-x86/SW%20BF2%20Profile%20Editor.exe)) to download the latest version 
 
 ## Features
 - Automatic updates
