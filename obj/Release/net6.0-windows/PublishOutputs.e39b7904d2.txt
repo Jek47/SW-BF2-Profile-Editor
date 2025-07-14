@@ -1,0 +1,5 @@
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Release\net6.0-windows\publish\SW BF2 PS4 Profile Editor.exe
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Release\net6.0-windows\publish\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Release\net6.0-windows\publish\SW BF2 PS4 Profile Editor.deps.json
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Release\net6.0-windows\publish\SW BF2 PS4 Profile Editor.runtimeconfig.json
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Release\net6.0-windows\publish\SW BF2 PS4 Profile Editor.dll.config

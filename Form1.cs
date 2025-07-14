@@ -8,6 +8,7 @@ using System.IO;
 using System.Media;
 using System.Numerics;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -20,7 +21,8 @@ namespace SW_BF2_PS4_Profile_Editor
         private ProfilePlatform currentPlatform;
         string? filePath;
         bool isMuted = Properties.Settings.Default.MusicMuted;
-
+        bool FirstRun = Properties.Settings.Default.FirstRun;
+        bool SkipUpdatePrompts = Properties.Settings.Default.SkipUpdatePrompts;
         public Form1()
         {
             InitializeComponent();
@@ -97,7 +99,7 @@ namespace SW_BF2_PS4_Profile_Editor
         private void btnLoad_Click(object sender, EventArgs e)
         {
             if (!string.Equals(toolStripStatusLabelStatus.Text, "Idle", StringComparison.OrdinalIgnoreCase))
-             {
+            {
                 DialogResult response = PromptToSaveBeforeOpening();
                 switch (response)
                 {
@@ -225,6 +227,14 @@ namespace SW_BF2_PS4_Profile_Editor
             System.Media.SystemSounds.Asterisk.Play();
             MessageBox.Show("Your profile has been saved successfully!", "Save complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            using (var SettingsForm = new Settings())
+            {
+                SettingsForm.StartPosition = FormStartPosition.CenterParent;
+                SettingsForm.ShowDialog(this);
+            }
+        }
         private void createBackup(string filePath)
         {
             try
@@ -326,6 +336,52 @@ namespace SW_BF2_PS4_Profile_Editor
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            bool firstRunSkip2ndPrompt = false;
+            if (FirstRun)
+            {
+                DialogResult autoUpdatePref = MessageBox.Show($"Would you like the app to automatically check for updates on startup?", "Update preference", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (autoUpdatePref == DialogResult.Yes)
+                {
+                    SkipUpdatePrompts = false;
+                    Properties.Settings.Default.SkipUpdatePrompts = false;
+                    FirstRun = false;
+                    firstRunSkip2ndPrompt = true;
+                    Properties.Settings.Default.FirstRun = false;
+                    Properties.Settings.Default.Save();
+                }
+                else if (autoUpdatePref == DialogResult.No)
+                {
+                    FirstRun = false;
+                    SkipUpdatePrompts = true;
+                    Properties.Settings.Default.FirstRun = false;
+                    Properties.Settings.Default.SkipUpdatePrompts = true;
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+            if (!SkipUpdatePrompts)
+            {
+                About aboutForm = new About();
+                if (firstRunSkip2ndPrompt)
+                {
+                    aboutForm.CFUfromMain = true;
+                    aboutForm.Shown += (s, e) => aboutForm.TriggerUpdateCheck();
+                    aboutForm.ShowDialog();
+                }
+                else
+                {
+                    DialogResult CFUPrompt = MessageBox.Show($"Do you want to check for updates now?", "Check for updates", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (CFUPrompt == DialogResult.Yes)
+                    {
+                        aboutForm.CFUfromMain = true;
+                        aboutForm.Shown += (s, e) => aboutForm.TriggerUpdateCheck();
+                        aboutForm.ShowDialog();
+                    }
+                }
+            }
             themePlayer.Stream = Properties.Resources.Duel;
             if (isMuted)
                 btnMute.BackgroundImage = Properties.Resources.MuteOn;
@@ -338,19 +394,16 @@ namespace SW_BF2_PS4_Profile_Editor
             this.DragEnter += Form1_DragEnter;
             this.DragDrop += Form1_DragDrop;
             this.FormClosing += Form1_FormClosing;
-            PrivateFontCollection fontCollection = new PrivateFontCollection();
-            byte[] fontData = Properties.Resources.StarjediSpecialEdition_9Bqy;
-            IntPtr fontPtr = Marshal.AllocCoTaskMem(fontData.Length);
-            Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
-            fontCollection.AddMemoryFont(fontPtr, fontData.Length);
-            Marshal.FreeCoTaskMem(fontPtr);
-            Font starWarsFont = new Font(fontCollection.Families[0], 14F, FontStyle.Regular);
-            lblStats.Font = starWarsFont;
-            lblMedals.Font = starWarsFont;
             Version? appVersion = Assembly.GetExecutingAssembly().GetName().Version;
             toolStripStatusLabelAppVer.Text = (appVersion != null)
                 ? $"v{appVersion.Major}.{appVersion.Minor}"
                 : "";
+            lblProfileName.Font = FontManager.StarWarsMainFont;
+            lblStats.Font = FontManager.StarWarsMainFont;
+            lblMedals.Font = FontManager.StarWarsMainFont;
+            lblProfileName.UseCompatibleTextRendering = true;
+            lblStats.UseCompatibleTextRendering = true;
+            lblMedals.UseCompatibleTextRendering = true;
         }
         private void lblHelloThere_Click(object sender, EventArgs e)
         {
@@ -434,35 +487,42 @@ namespace SW_BF2_PS4_Profile_Editor
         }
         private void ReadStatsFromFile(string filePath)
         {
-            using var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            using var br = new BinaryReader(fs);
+            try
+            {
+                using var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                using var br = new BinaryReader(fs);
 
-            var offsets = ProfileOffsets.Map[currentPlatform];
+                var offsets = ProfileOffsets.Map[currentPlatform];
 
-            fs.Seek(offsets.PlayerPointsOffset, SeekOrigin.Begin);
-            txtPlayerPoints.Text = EndianUtils.ReadUInt32LE(br).ToString();
-            fs.Seek(offsets.KillsOffset, SeekOrigin.Begin);
-            txtKills.Text = EndianUtils.ReadUInt32LE(br).ToString();
-            fs.Seek(offsets.DeathsOffset, SeekOrigin.Begin);
-            txtDeaths.Text = EndianUtils.ReadUInt32LE(br).ToString();
-            fs.Seek(offsets.GunslingerOffset, SeekOrigin.Begin);
-            txtGunslinger.Text = EndianUtils.ReadUInt16LE(br).ToString();
-            fs.Seek(offsets.FrenzyOffset, SeekOrigin.Begin);
-            txtFrenzy.Text = EndianUtils.ReadUInt16LE(br).ToString();
-            fs.Seek(offsets.DemolitionOffset, SeekOrigin.Begin);
-            txtDemolition.Text = EndianUtils.ReadUInt16LE(br).ToString();
-            fs.Seek(offsets.TechnicianOffset, SeekOrigin.Begin);
-            txtTechnician.Text = EndianUtils.ReadUInt16LE(br).ToString();
-            fs.Seek(offsets.MarksmanOffset, SeekOrigin.Begin);
-            txtMarksman.Text = EndianUtils.ReadUInt16LE(br).ToString();
-            fs.Seek(offsets.RegulatorOffset, SeekOrigin.Begin);
-            txtRegulator.Text = EndianUtils.ReadUInt16LE(br).ToString();
-            fs.Seek(offsets.EnduranceOffset, SeekOrigin.Begin);
-            txtEndurance.Text = EndianUtils.ReadUInt16LE(br).ToString();
-            fs.Seek(offsets.GuardianOffset, SeekOrigin.Begin);
-            txtGuardian.Text = EndianUtils.ReadUInt16LE(br).ToString();
-            fs.Seek(offsets.WarHeroOffset, SeekOrigin.Begin);
-            txtWarHero.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.PlayerPointsOffset, SeekOrigin.Begin);
+                txtPlayerPoints.Text = EndianUtils.ReadUInt32LE(br).ToString();
+                fs.Seek(offsets.KillsOffset, SeekOrigin.Begin);
+                txtKills.Text = EndianUtils.ReadUInt32LE(br).ToString();
+                fs.Seek(offsets.DeathsOffset, SeekOrigin.Begin);
+                txtDeaths.Text = EndianUtils.ReadUInt32LE(br).ToString();
+                fs.Seek(offsets.GunslingerOffset, SeekOrigin.Begin);
+                txtGunslinger.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.FrenzyOffset, SeekOrigin.Begin);
+                txtFrenzy.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.DemolitionOffset, SeekOrigin.Begin);
+                txtDemolition.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.TechnicianOffset, SeekOrigin.Begin);
+                txtTechnician.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.MarksmanOffset, SeekOrigin.Begin);
+                txtMarksman.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.RegulatorOffset, SeekOrigin.Begin);
+                txtRegulator.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.EnduranceOffset, SeekOrigin.Begin);
+                txtEndurance.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.GuardianOffset, SeekOrigin.Begin);
+                txtGuardian.Text = EndianUtils.ReadUInt16LE(br).ToString();
+                fs.Seek(offsets.WarHeroOffset, SeekOrigin.Begin);
+                txtWarHero.Text = EndianUtils.ReadUInt16LE(br).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while reading data from file:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void ShowTemporaryStatus(string message, int durationMs = 3000)
         {
@@ -625,6 +685,27 @@ namespace SW_BF2_PS4_Profile_Editor
             {
                 MessageBox.Show($"Error while writing data to file:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+    }
+    public static class FontManager
+    {
+        public static Font StarWarsMainFont { get; private set; }
+        public static Font StarWarsSecondaryFont { get; private set; }
+        public static Font StarWarsMediumFont { get; private set; }
+        public static Font StarWarsTinyFont { get; private set; }
+        static FontManager()
+        {
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            byte[] fontData = Properties.Resources.SWFont;
+            IntPtr fontPtr = Marshal.AllocCoTaskMem(fontData.Length);
+            Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
+            pfc.AddMemoryFont(fontPtr, fontData.Length);
+            Marshal.FreeCoTaskMem(fontPtr);
+            StarWarsMainFont = new Font(pfc.Families[0], 15f, FontStyle.Regular);
+            StarWarsSecondaryFont = new Font(pfc.Families[0], 14.25f, FontStyle.Regular);
+            StarWarsMediumFont = new Font(pfc.Families[0], 10.5f, FontStyle.Regular);
+            StarWarsTinyFont = new Font(pfc.Families[0], 9.75f, FontStyle.Regular);
         }
     }
     public enum ProfilePlatform

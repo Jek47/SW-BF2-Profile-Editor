@@ -14,7 +14,11 @@ namespace SW_BF2_PS4_Profile_Editor
     {
         public PlatformSelection() { InitializeComponent(); }
         public string? SelectedPlatform { get; private set; }
-        private void PlatformSelection_Load(object sender, EventArgs e) { }
+        private void PlatformSelection_Load(object sender, EventArgs e) 
+        {
+            label1.Font = FontManager.StarWarsMainFont;
+            label1.UseCompatibleTextRendering = true;
+        }
         private void returnToMainWindow()
             {
             MessageBox.Show("You have chosen " + SelectedPlatform, "Platform chosen", MessageBoxButtons.OK, MessageBoxIcon.Information);

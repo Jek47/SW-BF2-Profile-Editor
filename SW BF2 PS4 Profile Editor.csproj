@@ -2,12 +2,26 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
+<PublishSingleFile>true</PublishSingleFile>
+<SelfContained>true</SelfContained>
+<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+
+
     <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>SW_BF2_PS4_Profile_Editor</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <AssemblyName>SW BF2 Profile Editor</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +36,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\Icon.ico" />
-    <EmbeddedResource Include="Resources\StarjediSpecialEdition-9Bqy.ttf" />
     <EmbeddedResource Include="Resources\Wallpaper2.png" />
   </ItemGroup>
 

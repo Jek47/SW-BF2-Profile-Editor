@@ -46,11 +46,11 @@
             // lblVerNum
             // 
             lblVerNum.AutoSize = true;
-            lblVerNum.Font = new Font("StarJedi Special Edition", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblVerNum.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblVerNum.ForeColor = Color.White;
             lblVerNum.Location = new Point(15, 40);
             lblVerNum.Name = "lblVerNum";
-            lblVerNum.Size = new Size(131, 20);
+            lblVerNum.Size = new Size(105, 16);
             lblVerNum.TabIndex = 1;
             lblVerNum.Text = "version numbeR";
             // 
@@ -69,11 +69,11 @@
             // lblAuthor
             // 
             lblAuthor.AutoSize = true;
-            lblAuthor.Font = new Font("StarJedi Special Edition", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAuthor.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblAuthor.ForeColor = Color.White;
             lblAuthor.Location = new Point(15, 60);
             lblAuthor.Name = "lblAuthor";
-            lblAuthor.Size = new Size(67, 20);
+            lblAuthor.Size = new Size(51, 16);
             lblAuthor.TabIndex = 3;
             lblAuthor.Text = "AuthoR";
             // 
@@ -93,11 +93,11 @@
             // lblWebsite
             // 
             lblWebsite.AutoSize = true;
-            lblWebsite.Font = new Font("StarJedi Special Edition", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblWebsite.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblWebsite.ForeColor = Color.White;
             lblWebsite.Location = new Point(15, 80);
             lblWebsite.Name = "lblWebsite";
-            lblWebsite.Size = new Size(58, 20);
+            lblWebsite.Size = new Size(46, 16);
             lblWebsite.TabIndex = 5;
             lblWebsite.Text = "GithuB";
             // 
@@ -151,22 +151,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("StarJedi Special Edition", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Yellow;
             label1.Location = new Point(18, 9);
             label1.Name = "label1";
-            label1.Size = new Size(269, 31);
+            label1.Size = new Size(181, 24);
             label1.TabIndex = 8;
             label1.Text = "Sw bf2 profile editoR";
             // 
             // lblDesc
             // 
             lblDesc.AutoSize = true;
-            lblDesc.Font = new Font("StarJedi Special Edition", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDesc.Font = new Font("Microsoft Sans Serif", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
             lblDesc.ForeColor = Color.White;
             lblDesc.Location = new Point(9, 113);
             lblDesc.Name = "lblDesc";
-            lblDesc.Size = new Size(107, 23);
+            lblDesc.Size = new Size(81, 17);
             lblDesc.TabIndex = 9;
             lblDesc.Text = "DescriptioN";
             // 

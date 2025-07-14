@@ -1,0 +1,1 @@
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\bin\Release\net6.0-windows\publish\win-x86\SW BF2 Profile Editor.exe

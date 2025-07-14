@@ -121,7 +121,8 @@
     <value>17, 17</value>
   </metadata>
   <data name="lblDescription.Text" xml:space="preserve">
-    <value>A portable, standalone editor for SW: BF2 profile data.
+    <value>A portable, standalone editor for
+Star Wars: Battlefront 2 profile data.
 
 Currently supports PS4 (2024 Classic Collection) and PC (Original 2005 release) only. 
 May expand to include other versions of the game in the future.</value>

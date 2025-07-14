@@ -39,3 +39,4 @@ C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\re
 C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.pdb
 C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW BF2 PS4 Profile Editor.genruntimeconfig.cache
 C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\ref\SW BF2 PS4 Profile Editor.dll
+C:\Users\Jake\Documents\GitHub\SW-BF2-Profile-Editor\obj\Debug\net6.0-windows\SW_BF2_PS4_Profile_Editor.Settings.resources

@@ -76,6 +76,7 @@
             btnMute = new Button();
             toolTip1 = new ToolTip(components);
             lblStormtrooperEasterEgg = new Label();
+            btnSettings = new Button();
             lblHelloThere = new Label();
             lblProfileName = new Label();
             statusStrip.SuspendLayout();
@@ -494,11 +495,11 @@
             // 
             lblStats.AutoSize = true;
             lblStats.BackColor = Color.Transparent;
-            lblStats.Font = new Font("StarJedi Special Edition", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStats.Font = new Font("Microsoft Tai Le", 15F, FontStyle.Regular, GraphicsUnit.Point);
             lblStats.ForeColor = Color.White;
             lblStats.Location = new Point(7, 138);
             lblStats.Name = "lblStats";
-            lblStats.Size = new Size(431, 32);
+            lblStats.Size = new Size(296, 25);
             lblStats.TabIndex = 42;
             lblStats.Text = "───  S t a t i s t i c S ───────────────";
             // 
@@ -506,11 +507,11 @@
             // 
             lblMedals.AutoSize = true;
             lblMedals.BackColor = Color.Transparent;
-            lblMedals.Font = new Font("StarJedi Special Edition", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMedals.Font = new Font("Microsoft Tai Le", 15F, FontStyle.Regular, GraphicsUnit.Point);
             lblMedals.ForeColor = Color.White;
             lblMedals.Location = new Point(4, 290);
             lblMedals.Name = "lblMedals";
-            lblMedals.Size = new Size(434, 32);
+            lblMedals.Size = new Size(310, 25);
             lblMedals.TabIndex = 41;
             lblMedals.Text = "───  M e d a l S ─────────────────────";
             // 
@@ -566,7 +567,7 @@
             btnMute.Location = new Point(864, 462);
             btnMute.Name = "btnMute";
             btnMute.Size = new Size(25, 25);
-            btnMute.TabIndex = 39;
+            btnMute.TabIndex = 40;
             toolTip1.SetToolTip(btnMute, "Mute");
             btnMute.UseVisualStyleBackColor = false;
             btnMute.Click += btnMute_Click;
@@ -585,6 +586,25 @@
             toolTip1.SetToolTip(lblStormtrooperEasterEgg, "?");
             lblStormtrooperEasterEgg.Click += lblStormtrooperEasterEgg_Click;
             // 
+            // btnSettings
+            // 
+            btnSettings.BackColor = Color.Transparent;
+            btnSettings.BackgroundImage = Properties.Resources.Settings;
+            btnSettings.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSettings.FlatAppearance.BorderSize = 0;
+            btnSettings.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnSettings.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnSettings.FlatStyle = FlatStyle.Flat;
+            btnSettings.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSettings.ForeColor = Color.White;
+            btnSettings.Location = new Point(864, 431);
+            btnSettings.Name = "btnSettings";
+            btnSettings.Size = new Size(25, 25);
+            btnSettings.TabIndex = 39;
+            toolTip1.SetToolTip(btnSettings, "Settings");
+            btnSettings.UseVisualStyleBackColor = false;
+            btnSettings.Click += btnSettings_Click;
+            // 
             // lblHelloThere
             // 
             lblHelloThere.AutoSize = true;
@@ -602,11 +622,11 @@
             // 
             lblProfileName.AutoSize = true;
             lblProfileName.BackColor = Color.Transparent;
-            lblProfileName.Font = new Font("StarJedi Special Edition", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            lblProfileName.Font = new Font("Microsoft Tai Le", 15F, FontStyle.Regular, GraphicsUnit.Point);
             lblProfileName.ForeColor = Color.White;
             lblProfileName.Location = new Point(195, 12);
             lblProfileName.Name = "lblProfileName";
-            lblProfileName.Size = new Size(158, 32);
+            lblProfileName.Size = new Size(99, 25);
             lblProfileName.TabIndex = 60;
             lblProfileName.Text = "p r o f i l E";
             // 
@@ -617,6 +637,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(893, 517);
+            Controls.Add(btnSettings);
             Controls.Add(lblMarksman);
             Controls.Add(lblTechnician);
             Controls.Add(lblHelloThere);
@@ -740,5 +761,6 @@
         private Label lblStormtrooperEasterEgg;
         private Label lblHelloThere;
         private Label lblProfileName;
+        private Button btnSettings;
     }
 }

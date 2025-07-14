@@ -139,11 +139,21 @@ namespace SW_BF2_PS4_Profile_Editor.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Settings {
+            get {
+                object obj = ResourceManager.GetObject("Settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] StarjediSpecialEdition_9Bqy {
+        internal static byte[] SWFont {
             get {
-                object obj = ResourceManager.GetObject("StarjediSpecialEdition-9Bqy", resourceCulture);
+                object obj = ResourceManager.GetObject("SWFont", resourceCulture);
                 return ((byte[])(obj));
             }
         }
