@@ -11,7 +11,7 @@ A portable, standalone editor for Star Wars: Battlefront 2 profile data.
 - Drag/drop + file browsing support
 - Automatic backup creation, backup before editing your profile
 - Dynamic K/D ratio and P/L figures
-- _"_Duel of the Fates theme song_" (can be muted)_
+- _"Duel of the Fates"_ theme song _(can be muted)_
 - A couple of hidden meme easter eggs 👀
 
 ## Supported platforms 
