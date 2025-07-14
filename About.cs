@@ -59,38 +59,39 @@ namespace SW_BF2_PS4_Profile_Editor
         {
             CFUfromMain = false;
             string currentVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "0.0";
-            MessageBox.Show("Current version: " + currentVersion);
             string latestVersion = "";
-            using (HttpClient client = new HttpClient())
+            using var client = new HttpClient();
             {
                 try
                 {
-                    latestVersion = await client.GetStringAsync("https://github.com/Jek47/SW-BF2-Profile-Editor/blob/main/Properties/ver");
+                    latestVersion = await client.GetStringAsync("https://raw.githubusercontent.com/Jek47/SW-BF2-Profile-Editor/main/Resources/ver");
                     latestVersion = latestVersion.Trim();
                     if (latestVersion != currentVersion)
                     {
                         DialogResult updatePrompt = MessageBox.Show($"New version available: v{latestVersion}\nYou’re currently on v{currentVersion}.\n\nUpdate now?", "Update available", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (updatePrompt == DialogResult.Yes)
                         {
-                            string updateUrl = await client.GetStringAsync("https://github.com/Jek47/SW-BF2-Profile-Editor/blob/main/Properties/rel");
+                            string updateUrl = await client.GetStringAsync("https://raw.githubusercontent.com/Jek47/SW-BF2-Profile-Editor/main/Resources/rel");
                             updateUrl = updateUrl.Trim();
                             string downloadsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-                            string downloadPath = Path.Combine(downloadsFolder, "SWBF2Editor_v", latestVersion, ".exe");
+                            string downloadPath = Path.Combine(downloadsFolder, "SW BF2 Profile Editor v" + latestVersion + ".exe");
                             {
-                                try
-                                {
-                                    byte[] data = await client.GetByteArrayAsync(updateUrl);
+                            try
+                            {
+                            var request = new HttpRequestMessage(HttpMethod.Get, updateUrl);
+                            var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
+                            response.EnsureSuccessStatusCode();
+                            byte[] data = await response.Content.ReadAsByteArrayAsync();
                                     File.WriteAllBytes(downloadPath, data);
+                            Process.Start(new ProcessStartInfo
+                                {
+                                    FileName = downloadPath,
+                                    UseShellExecute = true
+                                });
 
-                                    Process.Start(new ProcessStartInfo
-                                    {
-                                        FileName = downloadPath,
-                                        UseShellExecute = true
-                                    });
-
-                                    Application.Exit();
-                                }
-                                catch (Exception dlerror)
+                            Application.Exit();
+                            }
+                            catch (Exception dlerror)
                                 {
                                     MessageBox.Show($"Update failed. Could not download the new version.\nError: {dlerror.Message}", "Update failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }

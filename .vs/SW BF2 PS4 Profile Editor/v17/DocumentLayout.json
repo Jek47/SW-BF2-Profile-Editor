@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|c:\\users\\jake\\documents\\github\\sw-bf2-profile-editor\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|solutionrelative:about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|c:\\users\\jake\\documents\\github\\sw-bf2-profile-editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|c:\\users\\jake\\documents\\github\\sw-bf2-profile-editor\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|solutionrelative:about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|c:\\users\\jake\\documents\\github\\sw-bf2-profile-editor\\sw bf2 ps4 profile editor.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|solutionrelative:sw bf2 ps4 profile editor.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|c:\\users\\jake\\documents\\github\\sw-bf2-profile-editor\\platformselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|solutionrelative:platformselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|c:\\users\\jake\\documents\\github\\sw-bf2-profile-editor\\sw bf2 ps4 profile editor.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|solutionrelative:sw bf2 ps4 profile editor.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8FF7399-B621-45B7-9A06-925D4B31EC22}|SW BF2 PS4 Profile Editor.csproj|C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\platformselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "SW BF2 PS4 Profile Editor",
               "DocumentMoniker": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\SW BF2 PS4 Profile Editor.csproj",
               "RelativeDocumentMoniker": "SW BF2 PS4 Profile Editor.csproj",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -66,13 +66,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwFABAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFABAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T23:03:26.362Z",
               "EditorCaption": ""
@@ -86,12 +86,11 @@
               "ToolTip": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\PlatformSelection.cs [Design]",
               "RelativeToolTip": "PlatformSelection.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T20:09:23.636Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-11T20:09:23.636Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PlatformSelection.cs",
               "DocumentMoniker": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\PlatformSelection.cs",
               "RelativeDocumentMoniker": "PlatformSelection.cs",
@@ -99,12 +98,11 @@
               "RelativeToolTip": "PlatformSelection.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T20:10:15.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T20:10:15.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "About.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\About.cs",
               "RelativeDocumentMoniker": "About.cs",
@@ -116,13 +114,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "About.cs",
               "DocumentMoniker": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\About.cs",
               "RelativeDocumentMoniker": "About.cs",
               "ToolTip": "C:\\Users\\Jake\\Documents\\GitHub\\SW-BF2-Profile-Editor\\About.cs",
               "RelativeToolTip": "About.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwB4AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwE8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T10:42:53.336Z",
               "EditorCaption": ""
